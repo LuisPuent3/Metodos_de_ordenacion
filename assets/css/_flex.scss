@@ -1,0 +1,52 @@
+.contenedorMetodos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 3rem;
+    
+}
+
+.metodos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 30%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+
+ 
+
+   
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+
+}
+
+.metodos img{
+    width: 75px;
+    height: 75px;
+    margin-right: 1rem;
+    
+}
+
+.nombre{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #333;
+    padding-left: 15%;
+}
+
+

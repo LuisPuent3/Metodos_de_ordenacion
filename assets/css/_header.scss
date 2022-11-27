@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;  
+
+    .cabeza{
+        font-size: 80px;
+        font-weight: 900;
+    }
+}

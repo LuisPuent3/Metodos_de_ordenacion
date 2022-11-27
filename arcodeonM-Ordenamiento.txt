@@ -1,0 +1,9 @@
+Burbuja Compara // con el numero que tiene a lado
+Burbuja Mejorada // ocupa el auxiliar para guarda la vairable mientras se hace el cambio, esto hasta llegar a su caso base
+QuicKsort // ocupa un pivote puede ser al azar y lo compara con 2 punteros
+Shellsort // se divide el arreglo en 2, y este dertemira el espacio que va haber entre los numeros a comparar
+Radixsort // se toma su unidades y se ordenadn enun arreglo para despues acomdaro dependiendo sus decenas, centenas
+Intercalacion // necesita de 2 arreglos ya preordenados, y estos se van ordenando en uno nuevo
+Seleccion directa // se comparan directo en el arreglo 2 numeros de extremo a estreo y este se va recorriendo
+Mezcla directa // se divide el arreglo, y se va comprando uno por uno, depues se obtinenen de 2 en dos y se va comparando y metiendo directo hasta encontrar el menor 
+Mezcla natural //del arreglo natural se manda a otro areglo los numeros que no esten en secuencia, despues se fucionan y se vuelve hacer lo mismo
