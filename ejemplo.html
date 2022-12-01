@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<style>
+   .frameDos {
+  position: relative;
+}
+
+.frameDos iframe {
+  z-index: 1; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
+  position: relative;
+}
+
+.frameDos button {
+  z-index: 2; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 410px;
+  height: 250px;
+  /* Propiedades específicas para button, cambiarían para un div, un enlace, etc. */
+  color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;  
+  background-image: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+</style>
+<body>
+    
+        <section>
+            <div class="frameMain">
+              <iframe width="610" height="315" src="https://www.youtube.com/embed/uiiss0hP8xM?start=246" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="frameDos">
+              <iframe width="410" height="250" src="https://www.youtube.com/embed/TqTEJ-Jd6Ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <button title="Reproducir vídeo en la ventana principal">Reproducir vídeo en la ventana principal</button>
+            </div>
+          </section>
+
+    <script>
+
+const frameMain     = document.querySelector('.frameMain').querySelector('iframe');
+const frameDos      = document.querySelector('.frameDos').querySelector('iframe');
+const frameDosBoton = document.querySelector('.frameDos').querySelector('button');
+
+frameDosBoton.addEventListener('click', () => {
+  const srcMain = frameMain.src;
+  const srcDos  = frameDos.src;
+  
+  // El '?autoplay=1' es opcional (hace que se autoreproduzca el iframe principal)
+  frameMain.src = srcDos + '?autoplay=1';
+  frameDos.src  = srcMain;
+});
+
+    </script>
+</body>
+</html>

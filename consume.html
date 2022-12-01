@@ -68,7 +68,38 @@ body{
     background: #ffffff;
     margin-top:-30px;
     border: 3px solid rgb(0, 0, 0);
+    position: relative;
     margin-left: 7px;}
+
+.frameDos iframe {
+  z-index: 1; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
+  position: relative;
+}
+
+.frameDos button {
+  z-index: 2; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 340px;
+  height: 233px;
+  /* Propiedades específicas para button, cambiarían para un div, un enlace, etc. */
+  color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;  
+  background-image: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
 
 .casilla{
     display: flex;
@@ -84,11 +115,10 @@ body{
     margin-bottom: -25px;}
 
 .parrafoUno{
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 17px;
     color: #000000;
-    margin-left: 29%;
-    margin-top: 10px;   }
+    margin-left: 38%;
+    margin-top: 5px;   }
 
 .parrafoDos{
 
@@ -128,7 +158,9 @@ h1{
         <section class="mainDos">
             <div class="frameMain"><iframe id="frameMain"loading="lazy" style="position: absolute; width: 62%; height: 450px;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFR9CuseIg&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"" frameborder="0"></iframe></div>
             <div class="columna">
-                <div class="frameDos"><iframe id="frameDos"width="340" height="233"  src="https://www.youtube.com/embed/5_SquLl6rVc" frameborder="0"></iframe><p class="parrafoUno">Mejor video</p></div>
+                <div class="frameDos"><iframe id="frameDos"width="340" height="233"  src="https://www.youtube.com/embed/5_SquLl6rVc" frameborder="0"></iframe><p class="parrafoUno">Mejor video</p>
+                <button title="Reproducir vídeo en la ventana principal">Reproducir vídeo en la ventana principal</button>
+                </div>
                 <div class="casilla"> <a src="" target="_blank"> <img class="img" src="./assets/img/githubGif.gif" alt="github"> </a><p class="parrafoDos">Codigo</p></div>
            </div>
         </section>
@@ -145,14 +177,18 @@ h1{
 
     //intercambiar frameMain y frameDos cuando se haga click en el frameDos
 
-    const frameMain = document.getElementById("frameMain");
-    const frameDos = document.getElementById("frameDos");
+const frameMain     = document.querySelector('.frameMain').querySelector('iframe');
+const frameDos      = document.querySelector('.frameDos').querySelector('iframe');
+const frameDosBoton = document.querySelector('.frameDos').querySelector('button');
 
-    frameDos.addEventListener("click", () => {
-        frameMain.src = frameDos.src;
-        frameDos.src = "https:&#x2F&#x2F;www.canva.com&#x2F;design&#x2F;DAFR9CuseIg&#x2F;view?embed";
-    });
-
+frameDosBoton.addEventListener('click', () => {
+  const srcMain = frameMain.src;
+  const srcDos  = frameDos.src;
+  
+  // El '?autoplay=1' es opcional (hace que se autoreproduzca el iframe principal)
+  frameMain.src = srcDos ; //+ '?autoplay=1'
+  frameDos.src  = srcMain;
+});
 
 </script>
 </body>
