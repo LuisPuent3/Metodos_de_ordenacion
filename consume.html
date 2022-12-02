@@ -73,8 +73,7 @@ body{
 
 .frameDos iframe {
   z-index: 1; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
-  position: relative;
-}
+  position: relative;}
 
 .frameDos button {
   z-index: 2; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
@@ -98,8 +97,7 @@ body{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
-  cursor: pointer;
-}
+  cursor: pointer;}
 
 .casilla{
     display: flex;
@@ -120,9 +118,7 @@ body{
     margin-left: 38%;
     margin-top: 5px;   }
 
-.parrafoDos{
-
-}
+.parrafoDos{}
 
 .img{
     width: 130px;
@@ -141,12 +137,13 @@ h1{
     flex-direction: row;
     justify-content: space-around;
     padding-top: 15px;  }
+
 .redes{     
     width: 120px;
     height: 50px;}
+
 .parrafoFinal{
-    margin-left: 104px;
-}
+    margin-left: 104px;}
 
     </style>
 </head>
@@ -166,17 +163,15 @@ h1{
         </section>
         <footer>
             <div class="final">
-                <a href=""><img class="redes"src="./assets/img/redesLinkedIn.svg" alt="LinkedIn"></a>
-                <a href=""><img class="redes"src="./assets/img/redesGithub.svg" alt="Github"></a>
+                <a href=""><img title="LinkedIn" class="redes"src="./assets/img/redesLinkedIn.svg" alt="LinkedIn"></a>
+                <a href=""><img title="Github" class="redes"src="./assets/img/redesGithub.svg" alt="Github"></a>
             </div>
             <div class="parrafoFinal"><p >redes</p></div>            
         </footer>        
     </section>
-
 <script>
 
-    //intercambiar frameMain y frameDos cuando se haga click en el frameDos
-
+//intercambiar frameMain y frameDos cuando se haga click en el frameDos
 const frameMain     = document.querySelector('.frameMain').querySelector('iframe');
 const frameDos      = document.querySelector('.frameDos').querySelector('iframe');
 const frameDosBoton = document.querySelector('.frameDos').querySelector('button');
