@@ -153,10 +153,10 @@ h1{
             <div class="texto"><h4>Metodo mas sencillo de ordenacion</h4></div>
         </div>
         <section class="mainDos">
-            <div class="frameMain"><iframe id="frameMain"loading="lazy" style="position: absolute; width: 62%; height: 450px;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFR9CuseIg&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"" frameborder="0"></iframe></div>
+            <div class="frameMain"><iframe id="frameMain"loading="lazy" style="position: absolute; width: 62%; height: 450px;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFTkYw5OC4&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"" frameborder="0"></iframe></div>
             <div class="columna">
-                <div class="frameDos"><iframe id="frameDos"width="340" height="233"  src="https://www.youtube.com/embed/5_SquLl6rVc" frameborder="0"></iframe><p class="parrafoUno">Mejor video</p>
-                <button title="Reproducir vídeo en la ventana principal">Reproducir vídeo en la ventana principal</button>
+                <div class="frameDos"><iframe id="frameDos"width="340" height="233"  src="https://www.youtube.com/embed/jG0rRx6lSTs?start=1015" title="Mezcla natural" frameborder="0"></iframe><p id="parrafo"class="parrafoUno">Mejor video</p>
+                <button onclick='' title="Reproducir vídeo en la ventana principal">Reproducir vídeo en la ventana principal</button>
                 </div>
                 <div class="casilla"> <a src="" target="_blank"> <img class="img" src="./assets/img/githubGif.gif" alt="github"> </a><p class="parrafoDos">Codigo</p></div>
            </div>
@@ -175,17 +175,27 @@ h1{
 const frameMain     = document.querySelector('.frameMain').querySelector('iframe');
 const frameDos      = document.querySelector('.frameDos').querySelector('iframe');
 const frameDosBoton = document.querySelector('.frameDos').querySelector('button');
+const parrafoUno = document.querySelector('.parrafoUno');
+const parrafoDos = "Presentacion";
+
+
+
 
 frameDosBoton.addEventListener('click', () => {
   const srcMain = frameMain.src;
   const srcDos  = frameDos.src;
+  const pparrafoUno = parrafoUno.innerHTML;
+  const pparrafoDos = parrafoDos;
+  
   
   // El '?autoplay=1' es opcional (hace que se autoreproduzca el iframe principal)
   frameMain.src = srcDos ; //+ '?autoplay=1'
   frameDos.src  = srcMain;
+  parrafoUno.innerHTML = pparrafoDos;
+  parrafoDos.textContent = pparrafoUno;
+ 
+
 });
-
-
 
 </script>
 </body>
