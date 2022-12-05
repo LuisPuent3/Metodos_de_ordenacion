@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Radixsort</title>
+    <style>
+body{
+    background: #000000;
+}        
+.contenedorMainDos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 115vh;
+    width: 98vw;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.979);}
+
+.mainDos{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #ececec;
+    position: relative;
+  
+    width: 94%;
+    height: 630px;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;}
+
+.frameMain{
+    width: 62%;
+    height: 450px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 25px;
+    background: #ffffff;}
+
+.columna{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #ffffffa4;
+    width: 370px;
+    height: 570px;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 0.6s ease-in-out;
+    position: relative; 
+    border-radius: 20px;
+    margin-left: 87px;}
+
+.frameDos{
+    width: 340px;
+    height: 270px;
+    border-radius: 10px;
+    background: #ffffff;
+    margin-top:-30px;
+    border: 3px solid rgb(0, 0, 0);
+    position: relative;
+    margin-left: 7px;}
+
+.frameDos iframe {
+  z-index: 1; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
+  position: relative;}
+
+.frameDos button {
+  z-index: 2; /* Opcional: Si el iframe se incluye antes del button en el código HTML, no hace falta z-index */
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 340px;
+  height: 233px;
+  /* Propiedades específicas para button, cambiarían para un div, un enlace, etc. */
+  color: transparent;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;  
+  background-image: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;}
+
+.casilla{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 340px;
+    height: 200px;
+    border-radius: 10px;
+    background: #ffffff;
+    margin-top:-40px;
+    border: 3px solid rgb(0, 0, 0);
+    margin-left: 7px;
+    margin-bottom: -25px;}
+
+.parrafoUno{
+    font-size: 17px;
+    color: #000000;
+    margin-left: 38%;
+    margin-top: 5px;   }
+
+.parrafoDos{}
+
+.img{
+    width: 130px;
+    height: 130px;
+    padding-top: 1.5rem;}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: -40px;}
+
+.final{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;  }
+
+.redes{     
+    width: 120px;
+    height: 50px;}
+
+.parrafoFinal{
+    margin-left: 104px;}
+
+    </style>
+</head>
+<body>
+    <section class="contenedorMainDos">
+        <div class="cabezaDos"><h1>Metodo Radixsort</h1>
+            <div class="texto"><h4>Ordenacion mediante sus unidades, decenas, centenas...</h4></div>
+        </div>
+        <section class="mainDos">
+            <div class="frameMain"><iframe id="frameMain"loading="lazy" style="position: absolute; width: 62%; height: 450px;" src="https://view.genial.ly/6382e5deb2e33700128837c8" allowfullscreen="allowfullscreen" allow="fullscreen"" frameborder="0"></iframe></div>
+            <div class="columna">
+                <div class="frameDos"><iframe id="frameDos"width="340" height="233"  src="https://www.youtube.com/embed/vWLXxraKqlc" title="Mezcla natural" frameborder="0"></iframe><p id="parrafo"class="parrafoUno">Mejor video</p>
+                <button onclick='' title="Reproducir vídeo en la ventana principal">Reproducir vídeo en la ventana principal</button>
+                </div>
+                <div class="casilla"> <a href="https://github.com/EgorYackovleff/RadixSort" target="_blank"> <img class="img" src="./assets/img/githubGif.gif" alt="github"> </a><p class="parrafoDos">Codigo</p></div>
+           </div>
+        </section>
+        <footer>
+            <div class="final">
+                <a href=""><img title="LinkedIn" class="redes"src="./assets/img/redesLinkedIn.svg" alt="LinkedIn"></a>
+                <a href=""><img title="Github" class="redes"src="./assets/img/redesGithub.svg" alt="Github"></a>
+            </div>
+            <div class="parrafoFinal"><p >redes</p></div>            
+        </footer>        
+    </section>
+<script>
+
+//intercambiar frameMain y frameDos cuando se haga click en el frameDos
+const frameMain     = document.querySelector('.frameMain').querySelector('iframe');
+const frameDos      = document.querySelector('.frameDos').querySelector('iframe');
+const frameDosBoton = document.querySelector('.frameDos').querySelector('button');
+const parrafoUno = document.querySelector('.parrafoUno');
+const parrafoDos = "Presentacion";
+
+
+
+
+frameDosBoton.addEventListener('click', () => {
+  const srcMain = frameMain.src;
+  const srcDos  = frameDos.src;
+  const pparrafoUno = parrafoUno.innerHTML;
+  const pparrafoDos = parrafoDos;
+  
+  
+  // El '?autoplay=1' es opcional (hace que se autoreproduzca el iframe principal)
+  frameMain.src = srcDos ; //+ '?autoplay=1'
+  frameDos.src  = srcMain;
+  parrafoUno.innerHTML = pparrafoDos;
+  parrafoDos.textContent = pparrafoUno;
+ 
+
+});
+
+</script>
+</body>
+</html>
