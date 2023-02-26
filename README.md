@@ -7,4 +7,4 @@
 ###### Ing. Sistemas Computacionales
 ----
 
- <Link: >https://luispuent3.github.io/Metodos_de_ordenacion/>
+ >Link: <https://luispuent3.github.io/Metodos_de_ordenacion/>
