@@ -1,7 +1,9 @@
 # Metodos de ordenacion 
 
 > Estructura de datos
+
 > Pagina web sobre los metodos de ordenacion
+
 ###### Ing. Sistemas Computacionales
 ----
 
